@@ -22,7 +22,7 @@ public class DemoController {
         person.setName("xyyDemo");
         person.setEmail("18850198317@163.com");
         person.setBirthday(new Date());
-        personalRepo.save(person);
+        person = personalRepo.save(person);
         log.info("xyy person ->{}", person);
         return person;
     }
