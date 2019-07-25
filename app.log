@@ -1,0 +1,110 @@
+2019-07-24 22:37:15.922  INFO 33772 --- [restartedMain] com.examplexyy.demo.DemoApplication      : Starting DemoApplication on LAPTOP-J1UB6M22 with PID 33772 (D:\IdeaProjects\target\classes started by xiongyy in D:\IdeaProjects)
+2019-07-24 22:37:15.924 DEBUG 33772 --- [restartedMain] com.examplexyy.demo.DemoApplication      : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 22:37:15.924  INFO 33772 --- [restartedMain] com.examplexyy.demo.DemoApplication      : No active profile set, falling back to default profiles: default
+2019-07-24 22:37:15.957  INFO 33772 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-24 22:37:15.968  INFO 33772 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-24 22:37:16.792  INFO 33772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-24 22:37:16.814  INFO 33772 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-24 22:37:16.815  INFO 33772 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-24 22:37:16.887  INFO 33772 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-24 22:37:16.887  INFO 33772 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 919 ms
+2019-07-24 22:37:17.072  INFO 33772 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-24 22:37:17.196  INFO 33772 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-07-24 22:37:17.238  INFO 33772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-24 22:37:17.242  INFO 33772 --- [restartedMain] com.examplexyy.demo.DemoApplication      : Started DemoApplication in 1.596 seconds (JVM running for 2.426)
+2019-07-24 22:42:22.144  INFO 33772 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-24 22:42:31.925 DEBUG 27868 --- [background-preinit] .h.v.m.ResourceBundleMessageInterpolator : Loaded expression factory via original TCCL
+2019-07-24 22:42:31.980  INFO 27868 --- [restartedMain] com.examplexyy.demo.DemoApplication      : Starting DemoApplication on LAPTOP-J1UB6M22 with PID 27868 (D:\IdeaProjects\target\classes started by xiongyy in D:\IdeaProjects)
+2019-07-24 22:42:31.981 DEBUG 27868 --- [restartedMain] com.examplexyy.demo.DemoApplication      : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 22:42:31.981  INFO 27868 --- [restartedMain] com.examplexyy.demo.DemoApplication      : No active profile set, falling back to default profiles: default
+2019-07-24 22:42:32.008  INFO 27868 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-24 22:42:32.009  INFO 27868 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-24 22:42:32.765  INFO 27868 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-24 22:42:32.792  INFO 27868 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-24 22:42:32.792  INFO 27868 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-24 22:42:32.850  INFO 27868 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-24 22:42:32.851  INFO 27868 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 842 ms
+2019-07-24 22:42:32.999  INFO 27868 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-24 22:42:33.116  INFO 27868 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-07-24 22:42:33.155  INFO 27868 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-24 22:42:33.165  INFO 27868 --- [restartedMain] com.examplexyy.demo.DemoApplication      : Started DemoApplication in 1.407 seconds (JVM running for 2.139)
+2019-07-24 22:43:42.673  INFO 27868 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-24 22:44:03.646 DEBUG 31812 --- [background-preinit] .h.v.m.ResourceBundleMessageInterpolator : Loaded expression factory via original TCCL
+2019-07-24 22:44:03.706  INFO 31812 --- [restartedMain] com.examplexyy.demo.DemoApplication      : Starting DemoApplication on LAPTOP-J1UB6M22 with PID 31812 (D:\IdeaProjects\target\classes started by xiongyy in D:\IdeaProjects)
+2019-07-24 22:44:03.707 DEBUG 31812 --- [restartedMain] com.examplexyy.demo.DemoApplication      : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 22:44:03.708  INFO 31812 --- [restartedMain] com.examplexyy.demo.DemoApplication      : No active profile set, falling back to default profiles: default
+2019-07-24 22:44:03.732  INFO 31812 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-24 22:44:03.733  INFO 31812 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-24 22:44:04.443  INFO 31812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-24 22:44:04.470  INFO 31812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-24 22:44:04.470  INFO 31812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-24 22:44:04.529  INFO 31812 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-24 22:44:04.530  INFO 31812 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 797 ms
+2019-07-24 22:44:04.685  INFO 31812 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-24 22:44:04.805  INFO 31812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-07-24 22:44:04.847  INFO 31812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-24 22:44:04.850  INFO 31812 --- [restartedMain] com.examplexyy.demo.DemoApplication      : Started DemoApplication in 1.365 seconds (JVM running for 2.108)
+2019-07-24 22:44:56.081  INFO 31812 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-24 22:45:10.394  INFO 32836 --- [restartedMain] com.examplexyy.demo.DemoApplication      : Starting DemoApplication on LAPTOP-J1UB6M22 with PID 32836 (D:\IdeaProjects\target\classes started by xiongyy in D:\IdeaProjects)
+2019-07-24 22:45:10.395 DEBUG 32836 --- [restartedMain] com.examplexyy.demo.DemoApplication      : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 22:45:10.396  INFO 32836 --- [restartedMain] com.examplexyy.demo.DemoApplication      : No active profile set, falling back to default profiles: default
+2019-07-24 22:45:10.426  INFO 32836 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-24 22:45:10.426  INFO 32836 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-24 22:45:11.173  INFO 32836 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-24 22:45:11.197  INFO 32836 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-24 22:45:11.197  INFO 32836 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-24 22:45:11.317  INFO 32836 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-24 22:45:11.317  INFO 32836 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 890 ms
+2019-07-24 22:45:11.506  INFO 32836 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-24 22:45:11.614  INFO 32836 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-07-24 22:45:11.659  INFO 32836 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-24 22:45:11.662  INFO 32836 --- [restartedMain] com.examplexyy.demo.DemoApplication      : Started DemoApplication in 1.511 seconds (JVM running for 2.281)
+2019-07-24 22:45:37.133  INFO 32836 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-24 22:46:01.995  INFO 31928 --- [restartedMain] com.examplexyy.demo.DemoApplication      : Starting DemoApplication on LAPTOP-J1UB6M22 with PID 31928 (D:\IdeaProjects\target\classes started by xiongyy in D:\IdeaProjects)
+2019-07-24 22:46:01.996 DEBUG 31928 --- [restartedMain] com.examplexyy.demo.DemoApplication      : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 22:46:01.997  INFO 31928 --- [restartedMain] com.examplexyy.demo.DemoApplication      : No active profile set, falling back to default profiles: default
+2019-07-24 22:46:02.034  INFO 31928 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-24 22:46:02.034  INFO 31928 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-24 22:46:02.867  INFO 31928 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-24 22:46:02.887  INFO 31928 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-24 22:46:02.887  INFO 31928 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-24 22:46:02.955  INFO 31928 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-24 22:46:02.955  INFO 31928 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 921 ms
+2019-07-24 22:46:03.127  INFO 31928 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-24 22:46:03.300  INFO 31928 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-07-24 22:46:03.349  INFO 31928 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-24 22:46:03.354  INFO 31928 --- [restartedMain] com.examplexyy.demo.DemoApplication      : Started DemoApplication in 1.615 seconds (JVM running for 2.462)
+2019-07-24 22:46:15.003  INFO 31928 --- [http-nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-24 22:46:15.004  INFO 31928 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-24 22:46:15.012  INFO 31928 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-07-24 22:46:15.029  INFO 31928 --- [http-nio-8080-exec-4] com.examplexyy.demo.web.DemoController   : xyy person ->Person(id=null, name=null, age=12, email=1885029)
+2019-07-24 22:46:59.526  INFO 31928 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-24 22:47:05.457  INFO 32384 --- [restartedMain] com.examplexyy.demo.DemoApplication      : Starting DemoApplication on LAPTOP-J1UB6M22 with PID 32384 (D:\IdeaProjects\target\classes started by xiongyy in D:\IdeaProjects)
+2019-07-24 22:47:05.459 DEBUG 32384 --- [restartedMain] com.examplexyy.demo.DemoApplication      : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 22:47:05.460  INFO 32384 --- [restartedMain] com.examplexyy.demo.DemoApplication      : No active profile set, falling back to default profiles: default
+2019-07-24 22:47:05.486  INFO 32384 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-24 22:47:05.486  INFO 32384 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-24 22:47:06.187  INFO 32384 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-24 22:47:06.204  INFO 32384 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-24 22:47:06.204  INFO 32384 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-24 22:47:06.259  INFO 32384 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-24 22:47:06.259  INFO 32384 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 773 ms
+2019-07-24 22:47:06.390  INFO 32384 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-24 22:47:06.493  INFO 32384 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-07-24 22:47:06.528  INFO 32384 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-24 22:47:06.531  INFO 32384 --- [restartedMain] com.examplexyy.demo.DemoApplication      : Started DemoApplication in 1.284 seconds (JVM running for 1.887)
+2019-07-24 22:48:05.628  INFO 32344 --- [restartedMain] com.examplexyy.demo.DemoApplication      : Starting DemoApplication on LAPTOP-J1UB6M22 with PID 32344 (D:\IdeaProjects\target\classes started by xiongyy in D:\IdeaProjects)
+2019-07-24 22:48:05.630 DEBUG 32344 --- [restartedMain] com.examplexyy.demo.DemoApplication      : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-24 22:48:05.631  INFO 32344 --- [restartedMain] com.examplexyy.demo.DemoApplication      : No active profile set, falling back to default profiles: default
+2019-07-24 22:48:05.666  INFO 32344 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-07-24 22:48:05.666  INFO 32344 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-07-24 22:48:06.430  INFO 32344 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-07-24 22:48:06.448  INFO 32344 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-24 22:48:06.448  INFO 32344 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-24 22:48:06.519  INFO 32344 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-07-24 22:48:06.520  INFO 32344 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 854 ms
+2019-07-24 22:48:06.677  INFO 32344 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-24 22:48:06.792  INFO 32344 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-07-24 22:48:06.843  INFO 32344 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-24 22:48:06.846  INFO 32344 --- [restartedMain] com.examplexyy.demo.DemoApplication      : Started DemoApplication in 1.486 seconds (JVM running for 2.29)
+2019-07-24 22:48:37.457  INFO 32344 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
