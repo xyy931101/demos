@@ -1,5 +1,12 @@
+
+server:
+  port: 8082
 #»’÷æ
-logging.level..com.examplexyy.demo=debug
+logging:
+  level:
+    com:
+      examplexyy:
+        demo: debug
 #logging.path=app.log
 logging.file=/logs/app.log
 
