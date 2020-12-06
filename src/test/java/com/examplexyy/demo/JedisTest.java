@@ -22,8 +22,8 @@ public class JedisTest {
 
     @Test
     public void testStr(){
-        JedisDemo demo = new JedisDemo();
+        /*JedisDemo demo = new JedisDemo();
         demo.strTest();
-        demo.hashTest();
+        demo.hashTest();*/
     }
 }
