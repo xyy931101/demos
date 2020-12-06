@@ -65,6 +65,8 @@ public class GroupChatClient {
                         String s = new String(buffer.array());
                         System.out.println(s);
                     }
+                    //移除当前的selectionKey,防止重复操作
+                    selectionKeys.remove();
                 }
             }else{
                 System.out.println("没有可用的通道。。。");
