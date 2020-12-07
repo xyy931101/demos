@@ -1,4 +1,4 @@
-package com.examplexyy.demo.netty.groupChart;
+package com.examplexyy.demo.nio.groupChart;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
