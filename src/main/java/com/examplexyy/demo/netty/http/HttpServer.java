@@ -15,11 +15,9 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 public class HttpServer {
 
     public static void main(String[] args) throws InterruptedException {
-        /**
-         * 1.创建两个线程组boosGroup workerGroup
-         * 2.bossGroup只处理连接请求，真正的客户端处理会交给workerGroup完成
-         * 3.两个都是无限循环
-         */
+        // 1.创建两个线程组boosGroup workerGroup
+        //2.bossGroup只处理连接请求，真正的客户端处理会交给workerGroup完成
+        //3.两个都是无限循环
         EventLoopGroup boosGroup = new NioEventLoopGroup();
 
         EventLoopGroup workerGroup = new NioEventLoopGroup();

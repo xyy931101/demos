@@ -15,7 +15,7 @@ public class HttpInitializer extends ChannelInitializer<SocketChannel> {
 
 
     @Override
-    protected void initChannel(SocketChannel socketChannel) throws Exception {
+    protected void initChannel(SocketChannel socketChannel) {
 
         //向管道增加处理器
         ChannelPipeline pipeline = socketChannel.pipeline();

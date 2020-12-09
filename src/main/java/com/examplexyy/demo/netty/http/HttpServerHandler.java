@@ -22,12 +22,12 @@ public class HttpServerHandler extends SimpleChannelInboundHandler<HttpObject> {
 
     /**
      * 读取客户端数据
-     * @param channelHandlerContext
-     * @param msg
-     * @throws Exception
+     * @param channelHandlerContext 上下文信息
+     * @param msg 请求信息
+     * @throws Exception 异常
      */
     @Override
-    protected void channelRead0(ChannelHandlerContext channelHandlerContext, HttpObject msg) throws Exception {
+    protected void channelRead0(ChannelHandlerContext channelHandlerContext, HttpObject msg) {
         //判断msg是不是httpRequest请求
         if(msg instanceof HttpRequest){
             System.out.println("msg的类型:" + msg.getClass());
