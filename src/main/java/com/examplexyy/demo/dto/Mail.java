@@ -1,5 +1,10 @@
 package com.examplexyy.demo.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
 import javax.mail.Session;
 import javax.mail.internet.MimeMessage;
 import java.util.List;
@@ -19,6 +24,8 @@ import java.util.List;
  * 别人笑我忒疯癫，我笑自己命太贱；
  * 不见满街漂亮妹，哪个归得程序员？
  */
+@Data
+@EqualsAndHashCode(callSuper = false)
 public class Mail extends MimeMessage {
     //模板地址
     private String templateName;
@@ -28,6 +35,7 @@ public class Mail extends MimeMessage {
     private List<String > sendTo;
     //抄送人
     private List<String> sendCc;
+
 
     public Mail(Session session) {
         super(session);

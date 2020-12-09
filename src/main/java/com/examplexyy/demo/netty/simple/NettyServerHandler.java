@@ -6,6 +6,8 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.CharsetUtil;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * @Author: Xiongyy
  * @Date: 2020/12/7 22:17
@@ -32,6 +34,19 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
 
         System.out.println("客户端发送消息是:" + buffer.toString(CharsetUtil.UTF_8));
         System.out.println("客户端地址是:" + ctx.channel().remoteAddress());
+
+
+        try {
+            ctx.channel().eventLoop().schedule(new Runnable() {
+                @Override
+                public void run() {
+                    ctx.writeAndFlush(Unpooled.copiedBuffer("hello 客户端,这是定时任务~~~", CharsetUtil.UTF_8));
+                    System.out.println("这是一个定时任务~~~");
+                }
+            }, 5, TimeUnit.SECONDS);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
