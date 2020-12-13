@@ -10,6 +10,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class TestSpringContext {
     public static void main(String[] args) {
-//        ClassPathXmlApplicationContext
+        ClassPathXmlApplicationContext tx = new ClassPathXmlApplicationContext("test.xml");
     }
 }
