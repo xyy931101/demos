@@ -1,0 +1,7 @@
+syntax = "proto3"; //协议的版本
+option java_outer_classname = "DemoPojo"; //生成的内部类的名，同时也是文件名
+message Demo{//会在DemoPojo生成一个内部类,他是真正的发送的POJO对象
+  int32 id = 1; //demo有个id的属性,其中1是表示id这个属性的POJO中的序号
+  string name = 2;
+
+}
