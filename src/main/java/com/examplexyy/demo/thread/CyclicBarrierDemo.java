@@ -8,6 +8,7 @@ import java.util.concurrent.CyclicBarrier;
  * @Date: 2021/1/3 13:48
  * .............................................
  * 佛祖保佑             永无BUG
+ * 线程自增计数器
  */
 public class CyclicBarrierDemo {
 
