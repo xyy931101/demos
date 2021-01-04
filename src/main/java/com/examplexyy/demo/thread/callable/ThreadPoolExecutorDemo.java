@@ -11,8 +11,11 @@ import java.util.concurrent.*;
 public class ThreadPoolExecutorDemo {
 
     public static void main(String[] args) {
+        //电脑的CPU的数量(CPU密集型)
+        int processors = Runtime.getRuntime().availableProcessors();
+
         ThreadPoolExecutor poolExecutor = new ThreadPoolExecutor(2,
-                5,
+                processors,
                 2,
                 TimeUnit.SECONDS,
                 new LinkedBlockingDeque<>(3),
