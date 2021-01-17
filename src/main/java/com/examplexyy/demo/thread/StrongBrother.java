@@ -10,6 +10,8 @@ import lombok.val;
  */
 public class StrongBrother {
     public static void main(String[] args) {
+
+
         Say say = new Say();
         new Thread(() ->{
             while (say.sayCount < 30) {
