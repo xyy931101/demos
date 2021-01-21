@@ -8,13 +8,13 @@ import java.io.*;
  * .............................................
  * 佛祖保佑             永无BUG
  */
-public class Full implements Serializable,Cloneable{
+public class Full implements Serializable, Cloneable {
 
     /**
      * 使用volatile关键字
      * 1.禁止指令重排， 2.保证变量可见性
      */
-    private volatile static  Full INSTANCE;
+    private volatile static Full INSTANCE;
     /**
      * 默认是第一次创建
      */
@@ -24,24 +24,24 @@ public class Full implements Serializable,Cloneable{
      * 构造方法私有化,保证单例
      */
     private Full() {
-        if (isFirstCreate){
+        if (INSTANCE == null) {
             synchronized (Full.class) {
                 if (isFirstCreate) {
                     isFirstCreate = false;
                 }
             }
-        }else{
+        } else {
             throw new RuntimeException("已经实例化过了！！！");
         }
     }
 
-    public static  Full getInstance(){
+    public static Full getInstance() {
         //使用DCL(double check lock)
-        if (INSTANCE == null){
-            synchronized (Full.class){
-               if (INSTANCE == null){
-                   INSTANCE = new Full();
-               }
+        if (INSTANCE == null) {
+            synchronized (Full.class) {
+                if (INSTANCE == null) {
+                    INSTANCE = new Full();
+                }
             }
         }
         return INSTANCE;
@@ -53,15 +53,22 @@ public class Full implements Serializable,Cloneable{
     }
 
     protected Object readResolve() {
+
         return INSTANCE;
     }
 
     public static void main(String[] args) throws IllegalAccessException, InstantiationException, CloneNotSupportedException, IOException, ClassNotFoundException {
+        Class<?> aClass = Full.class.getClassLoader().loadClass("com.examplexyy.demo.thread.single.Full");
+        Object o = aClass.newInstance();
+        System.out.println(o);
+
+        Class<?> aClass1 = Class.forName("com.examplexyy.demo.thread.single.Full");
+        System.out.println(aClass1);
         /**
          * 多线程获取
          */
         for (int i = 0; i < 10; i++) {
-            new Thread(() ->{
+            new Thread(() -> {
                 Full instance = Full.getInstance();
                 System.out.println(instance);
             }).start();
@@ -71,11 +78,11 @@ public class Full implements Serializable,Cloneable{
         /**
          * 反杀获取
          */
-        try{
+        try {
             Class<Full> clazz = Full.class;
             Full full = clazz.newInstance();
             System.out.println(full);
-        }catch (Exception e){
+        } catch (Exception e) {
             System.err.println(e);
         }
 
@@ -87,7 +94,7 @@ public class Full implements Serializable,Cloneable{
             Full clone = Full.getInstance().clone();
             Full clone1 = clone.clone();
             System.out.println(clone1);
-        }catch (Exception e){
+        } catch (Exception e) {
             System.err.println(e);
         }
 
@@ -98,10 +105,18 @@ public class Full implements Serializable,Cloneable{
         ByteArrayInputStream bis = new ByteArrayInputStream(bos.toByteArray());
         ObjectInputStream ois = new ObjectInputStream(bis);
         Full serialize = (Full) ois.readObject();
-        if (ois != null)    {ois.close();}
-        if (bis != null) {bis.close();}
-        if (oos != null) {oos.close();}
-        if (bos != null) {bos.close();}
+        if (ois != null) {
+            ois.close();
+        }
+        if (bis != null) {
+            bis.close();
+        }
+        if (oos != null) {
+            oos.close();
+        }
+        if (bos != null) {
+            bos.close();
+        }
         System.out.println(serialize);
 
 
