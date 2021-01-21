@@ -1,7 +1,10 @@
 package com.examplexyy.demo.thread.pool;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @Author: Xiongyy
@@ -10,21 +13,36 @@ import java.util.concurrent.Executors;
  * 佛祖保佑             永无BUG
  */
 public class ExecutorsDemo {
+
+
     public static void main(String[] args) {
 //        ExecutorService executor1 = Executors.newSingleThreadExecutor();
 //        ExecutorService executor2 = Executors.newScheduledThreadPool(5);
-        ExecutorService executor = Executors.newCachedThreadPool();
+//        ExecutorService executor = Executors.newCachedThreadPool();
+        ThreadPoolExecutor poolExecutor = new ThreadPoolExecutor(2, 3, 1, TimeUnit.SECONDS,
+                new ArrayBlockingQueue<>(3), new MyThreadFactory(), new ThreadPoolExecutor.AbortPolicy());
         try {
-
-            for (int i = 0; i < 10; i++) {
-                executor.execute(() ->{
+            poolExecutor.submit(() -> System.out.println(Thread.currentThread().getName() + "ok"));
+            for (int i = 0; i < 5; i++) {
+                poolExecutor.execute(() ->{
+                    System.out.println(poolExecutor.getTaskCount());
                     System.out.println(Thread.currentThread().getName() + "ok");
                 });
             }
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            executor.shutdown();
+            poolExecutor.shutdown();
         }
+    }
+}
+
+class MyThreadFactory implements ThreadFactory{
+    private static final AtomicInteger poolNumber = new AtomicInteger(1);
+
+    @Override
+    public Thread newThread(Runnable r) {
+        Thread t = new Thread(r, "xyy的线程工程" + poolNumber.getAndIncrement());
+        return t;
     }
 }
