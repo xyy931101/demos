@@ -1,12 +1,13 @@
 package com.examplexyy.demo.algorithm.leetcode;
 
 /**
+ * 整数反转
  * @Author: Xiongyy
  * @Date: 2021/2/2 23:40
  * .............................................
  * 佛祖保佑             永无BUG
  */
-public class Solution {
+public class ReverseInteger {
 
 
     public static void main(String[] args) {
