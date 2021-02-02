@@ -1,57 +1,58 @@
 package com.examplexyy.demo.algorithm;
 
-import com.alibaba.fastjson.JSONObject;
-
 /**
- * @Author: Xiongyy
- * @Date: 2021/1/30 22:07
- * .............................................
- * 佛祖保佑             永无BUG
+ * 快速排序演示
+ * @author Lvan
  */
 public class QuickSort {
-
     public static void main(String[] args) {
-        int[] arr = new int[]{7, 3, 2, 8, 1, 6, 5, 4, 9, 6, 20, 19, 0};
-        sort(arr, 0, arr.length - 1);
-        System.out.println(JSONObject.toJSONString(arr));
-    }
+        int[] arr = new int[]{87,38,88,69,4,81,45,49,65,23};
 
-    private static int partition(int[] arr, int leftBound, int rightBound) {
-        int pivot = arr[rightBound];
-        int left = leftBound;
-        int right = rightBound - 1;
-        while (left < right) {
-            while (left <= right && arr[left] <= pivot) {
-                left++;
-            }
-            while (left < right && arr[right] > pivot) {
-                right--;
-            }
-            if (left < right) {
-                swap(arr, left, right);
-            }
+        quickSort(arr, 0, arr.length - 1);
 
-            System.out.println("left:" + left + " right:" + right);
-
+        for (int i : arr) {
+            System.out.print(i + "\t");
         }
-        swap(arr, left, rightBound);
-
-        return left;
     }
 
-    private static void sort(int[] arr, int leftBound, int rightBound) {
-        if (leftBound >= rightBound) {
+    /**
+     * @param arr        待排序列
+     * @param leftIndex  待排序列起始位置
+     * @param rightIndex 待排序列结束位置
+     */
+    private static void quickSort(int[] arr, int leftIndex, int rightIndex) {
+        if (leftIndex >= rightIndex) {
             return;
         }
-        int mid = partition(arr, leftBound, rightBound);
-        sort(arr, leftBound, mid - 1);
-        sort(arr, mid+ 1, rightBound);
-    }
 
-    public static void swap(int[] arr, int i, int j) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
+        int left = leftIndex;
+        int right = rightIndex;
+        //待排序的第一个元素作为基准值
+        int key = arr[left];
 
+        //从左右两边交替扫描，直到left = right
+        while (left < right) {
+            while (right > left && arr[right] >= key) {
+                //从右往左扫描，找到第一个比基准值小的元素
+                right--;
+            }
+
+            //找到这种元素将arr[right]放入arr[left]中
+            arr[left] = arr[right];
+
+            while (left < right && arr[left] <= key) {
+                //从左往右扫描，找到第一个比基准值大的元素
+                left++;
+            }
+
+            //找到这种元素将arr[left]放入arr[right]中
+            arr[right] = arr[left];
+        }
+        //基准值归位
+        arr[left] = key;
+        //对基准值左边的元素进行递归排序
+        quickSort(arr, leftIndex, left - 1);
+        //对基准值右边的元素进行递归排序。
+        quickSort(arr, right + 1, rightIndex);
+    }
 }

@@ -9,6 +9,8 @@ package com.examplexyy.demo.algorithm;
 public class InsertionSort {
 
     public static void main(String[] args) {
+
+
         int [] array = new int[]{5, 3, 6, 8, 9, 4, 1, 7, 2};
 
         for (int i = 1; i < array.length; i++) {
