@@ -42,6 +42,11 @@ public class LevelTraversalBT {
         }
     }
 
+    /**
+     * 利用HashMap获取最大的层级宽度
+     * @param head
+     * @return
+     */
     public static int maxWithMap(Node head){
         if (head != null){
             //记录每个节点在那个层级
@@ -80,6 +85,11 @@ public class LevelTraversalBT {
     }
 
 
+    /**
+     * 不利用map获取最大层级宽度
+     * @param head
+     * @return
+     */
     public static int maxWithNoMap(Node head){
         if (head != null){
             //记录每个节点在那个层级
