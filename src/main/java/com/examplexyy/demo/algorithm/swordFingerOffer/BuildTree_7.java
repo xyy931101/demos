@@ -11,7 +11,7 @@ import java.util.Map;
  * .............................................
  * 佛祖保佑             永无BUG
  */
-public class SevenReConstructBinaryTree {
+public class BuildTree_7 {
 
 
     /**
@@ -19,7 +19,7 @@ public class SevenReConstructBinaryTree {
      */
     private Map<Integer, Integer> indexForInOrders = new HashMap<>();
 
-    public BinaryTreeNode reConstructBinaryTree(int[] pre, int[] in) {
+    public BinaryTreeNode buildTree(int[] pre, int[] in) {
         for (int i = 0; i < in.length; i++){
             indexForInOrders.put(in[i], i);
         }

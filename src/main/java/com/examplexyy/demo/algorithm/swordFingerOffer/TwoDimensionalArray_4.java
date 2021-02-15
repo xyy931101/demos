@@ -13,7 +13,7 @@ package com.examplexyy.demo.algorithm.swordFingerOffer;
     [18, 21, 23, 26, 30]
     ]
  */
-public class TwoDimensionalArray {
+public class TwoDimensionalArray_4 {
 
 
     public static void main(String[] args) {

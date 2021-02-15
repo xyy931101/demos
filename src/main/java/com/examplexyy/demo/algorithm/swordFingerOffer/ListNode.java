@@ -6,12 +6,12 @@ package com.examplexyy.demo.algorithm.swordFingerOffer;
  * .............................................
  * 佛祖保佑             永无BUG
  */
-public class ListNode<V>{
+public class ListNode{
 
-    V value;
+    int value;
     ListNode next;
 
-    public ListNode(V v){
+    public ListNode(int v){
         this.value = v;
     }
 
