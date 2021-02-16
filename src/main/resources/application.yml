@@ -22,6 +22,9 @@ spring:
     password: root
     driver-class-nam: com.mysql.jdbc.Driver
 
+  redis:
+
+
 
   data:
     elasticsearch:
