@@ -2,6 +2,8 @@ package com.examplexyy.demo.thread;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Vector;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
@@ -19,7 +21,6 @@ public class ReadWriteLockDemo {
 
     public static void main(String[] args) {
         MyCache myCache = new MyCache();
-
         for (int i = 0; i < 5; i++) {
            final int temp = i;
            new Thread(() ->{
@@ -47,6 +48,11 @@ class MyCache{
         readWriteLock.writeLock().lock();
         System.out.println(Thread.currentThread().getName() + "这是在写入：" + key);
         map.put(key, value);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         System.out.println(Thread.currentThread().getName() + "写入OK！");
 
         readWriteLock.writeLock().unlock();

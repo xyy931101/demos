@@ -4,6 +4,7 @@ import lombok.Data;
 
 import java.sql.*;
 import java.util.LinkedList;
+import java.util.TimerTask;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -64,6 +65,7 @@ public class MyDataSourcePool {
         } finally {
             lock.unlock();
         }
+
     }
 
     public void releaseConnection(Connection conn) {
