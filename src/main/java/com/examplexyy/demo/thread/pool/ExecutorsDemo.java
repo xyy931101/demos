@@ -1,9 +1,6 @@
 package com.examplexyy.demo.thread.pool;
 
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.ThreadFactory;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -16,6 +13,8 @@ public class ExecutorsDemo {
 
 
     public static void main(String[] args) {
+
+        ExecutorService executorService = Executors.newFixedThreadPool(12);
 //        ExecutorService executor1 = Executors.newSingleThreadExecutor();
 //        ExecutorService executor2 = Executors.newScheduledThreadPool(5);
 //        ExecutorService executor = Executors.newCachedThreadPool();
