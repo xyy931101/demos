@@ -18,12 +18,12 @@ public class AtomicDemo {
 
     public static void main(String[] args) {
         AtomicDemo demo = new AtomicDemo();
-        AtomicStampedReference<AtomicDemo> atomicDemo = new AtomicStampedReference<AtomicDemo>(demo,0);
+        AtomicStampedReference<AtomicDemo> atomicDemo = new AtomicStampedReference<AtomicDemo>(demo, 0);
 
-         new Thread(()->{
-             AtomicDemo reference = atomicDemo.getReference();
-             reference.setVersion(10);
-         });
+        new Thread(() -> {
+            AtomicDemo reference = atomicDemo.getReference();
+            reference.setVersion(10);
+        });
 
     }
 }

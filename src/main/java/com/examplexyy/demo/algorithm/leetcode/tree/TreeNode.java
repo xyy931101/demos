@@ -8,14 +8,31 @@ package com.examplexyy.demo.algorithm.leetcode.tree;
  * 佛祖保佑             永无BUG
  */
 public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
+    public int val;
+    public TreeNode left;
+    public TreeNode right;
     TreeNode() {}
     TreeNode(int val) { this.val = val; }
     TreeNode(int val, TreeNode left, TreeNode right) {
         this.val = val;
         this.left = left;
         this.right = right;
+    }
+
+    public static TreeNode getHead(){
+        TreeNode one = new TreeNode(1);
+        TreeNode two = new TreeNode(2);
+        TreeNode three = new TreeNode(2);
+        one.left = two;
+        one.right = three;
+        TreeNode four = new TreeNode(3);
+        TreeNode five = new TreeNode(4);
+        two.left = four;
+        two.right = five;
+        TreeNode six = new TreeNode(4);
+        TreeNode se = new TreeNode(3);
+        three.left = six;
+        three.right = se;
+        return one;
     }
 }

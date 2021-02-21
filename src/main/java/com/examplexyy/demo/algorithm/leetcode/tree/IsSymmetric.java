@@ -34,21 +34,9 @@ public class IsSymmetric {
 
 //    [1,2,2,3,4,4,3]
     public static void main(String[] args) {
-        TreeNode one = new TreeNode(1);
-        TreeNode two = new TreeNode(2);
-        TreeNode three = new TreeNode(2);
-        one.left = two;
-        one.right = three;
-        TreeNode four = new TreeNode(3);
-        TreeNode five = new TreeNode(4);
-        two.left = four;
-        two.right = five;
-        TreeNode six = new TreeNode(4);
-        TreeNode se = new TreeNode(3);
-        three.left = six;
-        three.right = se;
 
-        System.out.println(solution(one));
+
+        System.out.println(solution(TreeNode.getHead()));
 
     }
 
@@ -65,4 +53,6 @@ public class IsSymmetric {
         }
         return p.val == q.val && check(p.left, q.right) && check(p.right, q.left);
     }
+
+
 }
