@@ -2,6 +2,7 @@ package com.examplexyy.demo.thread;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @Author: Xiongyy
@@ -17,6 +18,8 @@ public class BlockingQueueDemo {
     }
 
     public static void test1(){
+        ConcurrentHashMap map = new ConcurrentHashMap(16);
+        map.size();
         BlockingQueue blockingQueue = new ArrayBlockingQueue(3);
         System.out.println(blockingQueue.add("1"));
         System.out.println(blockingQueue.add("2"));

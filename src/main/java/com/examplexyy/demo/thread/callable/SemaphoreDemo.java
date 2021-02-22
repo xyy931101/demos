@@ -12,8 +12,8 @@ import java.util.concurrent.locks.LockSupport;
 public class SemaphoreDemo {
 
     private static Semaphore A = new Semaphore(1);
-    private static Semaphore B = new Semaphore(1);
-    private static Semaphore C = new Semaphore(1);
+    private static Semaphore B = new Semaphore(0);
+    private static Semaphore C = new Semaphore(0);
 
     static class ThreadA extends Thread {
 
@@ -67,7 +67,6 @@ public class SemaphoreDemo {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        B.acquire(); C.acquire(); // 开始只有A可以获取, BC都不可以获取, 保证了A最先执行
         new ThreadA().start();
         new ThreadB().start();
         new ThreadC().start();

@@ -28,8 +28,10 @@ public class TwoTree {
         System.out.println("==============");
 
         System.out.print("pos-order:");
+
         pos(head);
         System.out.println();
+
         posByStack(head);
     }
 

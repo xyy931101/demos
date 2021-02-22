@@ -1,5 +1,6 @@
 package com.examplexyy.demo.thread;
 
+import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -11,8 +12,9 @@ import java.util.concurrent.TimeUnit;
 public class ReentrantLockDemo {
 
 
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws InterruptedException {
+        Semaphore semaphore = new Semaphore(3);
+        semaphore.acquire();
         PhoneLock phoneLock = new PhoneLock();
 
         new Thread(() ->{
@@ -27,6 +29,7 @@ public class ReentrantLockDemo {
 
 
 class PhoneLock{
+
 
     public synchronized void sendMsg(){
         System.out.println("send msg..." + Thread.currentThread().getName());

@@ -2,6 +2,7 @@ package com.examplexyy.demo.thread;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -47,9 +48,6 @@ class Data{
     private Condition conditionA = lock.newCondition();
     private Condition conditionB = lock.newCondition();
     private Condition conditionC= lock.newCondition();
-    private Integer countA = 1;
-    private Integer countB = 1;
-    private Integer countC = 1;
     private Integer number = 1;
 
     public void sayA(){
@@ -59,7 +57,7 @@ class Data{
                 //等待
                 conditionA.await();
             }
-            System.out.println(Thread.currentThread().getName() + " 的次数:" + countA++);
+            System.out.print(Thread.currentThread().getName() );
             number = 2;
             conditionB.signal();
         } catch (Exception e) {
@@ -76,7 +74,7 @@ class Data{
                 //等待
                 conditionB.await();
             }
-            System.out.println(Thread.currentThread().getName() + " 的次数:" + countB++);
+            System.out.print(Thread.currentThread().getName());
             number = 3;
             conditionC.signal();
         } catch (Exception e) {
@@ -94,7 +92,7 @@ class Data{
                 //等待
                 conditionC.await();
             }
-            System.out.println(Thread.currentThread().getName() + " 的次数:" + countC++);
+            System.out.println(Thread.currentThread().getName());
             number = 1;
             conditionA.signal();
         } catch (Exception e) {

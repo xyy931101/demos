@@ -14,13 +14,14 @@ public class CyclicBarrierDemo {
 
     public static void main(String[] args) {
         CyclicBarrier cyclicBarrier = new CyclicBarrier(7, () ->{
-            System.out.println("集齐7颗龙珠！！！");
+            System.out.println(System.currentTimeMillis() + "  集齐7颗龙珠！！！" + Thread.currentThread().getName());
         });
 
         for (int i = 0; i < 7; i++) {
             new Thread(() ->{
-                System.out.println("这是在收集啥的呢？");
+                System.out.println(Thread.currentThread().getName() + System.currentTimeMillis() + "  这是在收集啥的呢？");
                 try {
+                    Thread.sleep(10000);
                     cyclicBarrier.await();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -29,6 +30,8 @@ public class CyclicBarrierDemo {
                 }
             }).start();
         }
+
+        System.out.println(System.currentTimeMillis() + "  这是主线程");
     }
 
 }
