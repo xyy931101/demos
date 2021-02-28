@@ -1,5 +1,11 @@
 package com.examplexyy.demo.redis;
 
+import com.alibaba.fastjson.JSON;
+import redis.clients.jedis.Jedis;
+
+import java.util.List;
+import java.util.Map;
+
 /**
  * @Author: Xiongyy
  * @Date: 2020/4/19 23:31
@@ -16,8 +22,7 @@ package com.examplexyy.demo.redis;
  * 不见满街漂亮妹，哪个归得程序员？
  */
 public class JedisDemo {
-
-    /*public void strTest(){
+    public void strTest(){
         Jedis jedis = new Jedis("8.129.216.97", 6379);
         jedis.auth("admin");
         jedis.set("xyy1", "vxyy1");
@@ -45,5 +50,10 @@ public class JedisDemo {
         System.out.println(jedis.hget("book:1", "name"));
         Map<String, String> book1 = jedis.hgetAll("book:1");
         System.out.println(JSON.toJSONString(book1));
-    }*/
+    }
+
+    public static void main(String[] args) {
+        JedisDemo demo = new JedisDemo();
+        demo.strTest();
+    }
 }

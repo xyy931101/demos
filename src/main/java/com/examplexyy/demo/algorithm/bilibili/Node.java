@@ -6,13 +6,13 @@ package com.examplexyy.demo.algorithm.bilibili;
  * .............................................
  * 佛祖保佑             永无BUG
  */
-public class Node <V>{
+public class Node{
 
-    V value;
-    Node left;
-    Node right;
+    public int value;
+    public Node left;
+    public Node right;
 
-    public Node(V v){
+    public Node(int v){
         this.value = v;
     }
 
