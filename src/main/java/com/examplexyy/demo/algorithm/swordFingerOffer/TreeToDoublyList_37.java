@@ -1,4 +1,4 @@
-package com.examplexyy.demo.algorithm.leetcode.tree;
+package com.examplexyy.demo.algorithm.swordFingerOffer;
 
 import com.examplexyy.demo.algorithm.bilibili.Node;
 
@@ -8,7 +8,7 @@ import com.examplexyy.demo.algorithm.bilibili.Node;
  * .............................................
  * 佛祖保佑             永无BUG
  */
-public class TreeToDoublyList {
+public class TreeToDoublyList_37 {
 
     Node head, pre;
 
