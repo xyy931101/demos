@@ -17,6 +17,7 @@ public class InorderTraversal {
         List<Integer> result = new ArrayList<>();
         process(result, root);
         return result;
+
     }
 
     public void process(List<Integer> result, TreeNode root){
