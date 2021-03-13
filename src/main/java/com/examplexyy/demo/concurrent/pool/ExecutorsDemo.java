@@ -15,9 +15,9 @@ public class ExecutorsDemo {
     public static void main(String[] args) {
 
         ExecutorService executorService = Executors.newFixedThreadPool(12);
-//        ExecutorService executor1 = Executors.newSingleThreadExecutor();
-//        ExecutorService executor2 = Executors.newScheduledThreadPool(5);
-//        ExecutorService executor = Executors.newCachedThreadPool();
+        ExecutorService executor1 = Executors.newSingleThreadExecutor();
+        ExecutorService executor2 = Executors.newScheduledThreadPool(5);
+        ExecutorService executor = Executors.newCachedThreadPool();
         ThreadPoolExecutor poolExecutor = new ThreadPoolExecutor(2, 3, 1, TimeUnit.SECONDS,
                 new ArrayBlockingQueue<>(3), new MyThreadFactory(), new ThreadPoolExecutor.AbortPolicy());
         try {

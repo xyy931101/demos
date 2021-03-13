@@ -8,9 +8,9 @@ package com.examplexyy.demo.algorithm.swordFingerOffer;
  */
 public class ListNode{
 
-    int value;
-    ListNode next;
-    ListNode random;
+    public int value;
+    public ListNode next;
+    public ListNode random;
 
     public ListNode(int v){
         this.value = v;
