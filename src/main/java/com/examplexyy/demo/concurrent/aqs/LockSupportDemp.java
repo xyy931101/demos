@@ -1,4 +1,4 @@
-package com.examplexyy.demo.concurrent;
+package com.examplexyy.demo.concurrent.aqs;
 
 import java.util.concurrent.locks.LockSupport;
 
@@ -17,13 +17,9 @@ public class LockSupportDemp {
 
 
         A = new Thread(() ->{
-            try {
-                Thread.sleep(7000L);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+
             for (int i = 0; i <10; i++) {
-                System.out.println("A" + i);
+                System.out.print("A");
                 LockSupport.unpark(B);
                 LockSupport.park();//阻塞当前线程
             }
@@ -32,7 +28,7 @@ public class LockSupportDemp {
         B = new Thread(() ->{
             for (int i = 0; i <10; i++) {
                 LockSupport.park();//阻塞当前线程
-                System.out.println("B" + i);
+                System.out.print("B");
                 LockSupport.unpark(C);
             }
         });

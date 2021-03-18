@@ -1,6 +1,10 @@
 package com.examplexyy.demo.mq;
 
+import org.springframework.amqp.rabbit.core.RabbitAdmin;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
 
 /**
  * @Author: Xiongyy
@@ -19,5 +23,13 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class MqService {
+
+    @Autowired
+    RabbitAdmin rabbitAdmin;
+
+    @PostConstruct
+    public void init(){
+
+    }
 
 }
