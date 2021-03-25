@@ -149,9 +149,16 @@
             <artifactId>guava</artifactId>
             <version>21.0</version>
         </dependency>
+        <!-- 消息队列 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring-boot-starter</artifactId>
+            <version>1.5.3</version>
         </dependency>
     </dependencies>
 
