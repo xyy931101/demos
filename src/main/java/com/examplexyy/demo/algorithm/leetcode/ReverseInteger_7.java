@@ -7,7 +7,7 @@ package com.examplexyy.demo.algorithm.leetcode;
  * .............................................
  * 佛祖保佑             永无BUG
  */
-public class ReverseInteger {
+public class ReverseInteger_7 {
 
 
     public static void main(String[] args) {
