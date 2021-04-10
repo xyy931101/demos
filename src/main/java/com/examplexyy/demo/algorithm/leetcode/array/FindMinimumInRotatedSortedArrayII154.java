@@ -1,5 +1,7 @@
 package com.examplexyy.demo.algorithm.leetcode.array;
 
+import java.util.concurrent.Semaphore;
+
 /**
  * 已知一个长度为 n 的数组，预先按照升序排列，经由 1 到 n 次 旋转 后，得到输入数组。
  * 例如，原数组 nums = [0,1,4,4,5,6,7] 在变化后可能得到：
@@ -17,7 +19,10 @@ package com.examplexyy.demo.algorithm.leetcode.array;
  */
 public class FindMinimumInRotatedSortedArrayII154 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+        Semaphore a = new Semaphore(1);
+        Semaphore b = new Semaphore(0);
+        b.acquire();
         System.out.println(findMin(new int[]{1, 3, 3}));
     }
 
