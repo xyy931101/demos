@@ -2,7 +2,7 @@ package com.examplexyy.demo.collection;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @Author: Xiongyy
@@ -19,5 +19,7 @@ public class HashMapDemo {
 
         System.out.println(oldValue);
         System.out.println("1000".hashCode());
+
+        ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap<>();
     }
 }

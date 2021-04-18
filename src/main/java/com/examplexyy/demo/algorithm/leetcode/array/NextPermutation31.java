@@ -15,9 +15,10 @@ package com.examplexyy.demo.algorithm.leetcode.array;
 public class NextPermutation31 {
 
     public void nextPermutation(int[] nums) {
-        if (nums == null || nums.length < 2) {
-            return;
-        }
+        int end = nums.length-1;
+        int start = 0;
+        boolean find = false;
+
         int right = nums.length - 1;
         while (right > 0){
             if (nums[right] > nums[right - 1]) {

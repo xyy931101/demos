@@ -30,4 +30,16 @@ public class ReplaceSpace_5 {
         String newStr = new String(array, 0, size);
         return newStr;
     }
+
+    public static String replaceSpace2(String s) {
+        StringBuffer buffer = new StringBuffer();
+        for (char ch : s.toCharArray()) {
+            if (ch == ' '){
+                buffer.append("%20");
+            }else {
+                buffer.append(ch);
+            }
+        }
+        return buffer.toString();
+    }
 }

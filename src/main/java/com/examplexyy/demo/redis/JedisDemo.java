@@ -54,6 +54,8 @@ public class JedisDemo {
 
     public static void main(String[] args) {
         JedisDemo demo = new JedisDemo();
+
+
         demo.strTest();
     }
 }
