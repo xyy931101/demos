@@ -1,18 +1,32 @@
 package com.examplexyy.demo.algorithm;
 
+import com.alibaba.fastjson.JSONObject;
+
+import java.util.Arrays;
+
 /**
  * 快速排序演示
  * @author Lvan
  */
 public class QuickSort {
     public static void main(String[] args) {
-        int[] arr = new int[]{87,38,88,69,4,81,45,49,65,23};
+        int[] nums = MathUtil.generateRandomArray(100, 100);
+//        int[] nums = new int[]{87,38,88,69,4,81,45,49,65,23};
+//        int[] nums = new int[]{38,69,87,81,45,49,65,88};
+        int[] copyOf = Arrays.copyOf(nums, nums.length);
+        System.out.println(JSONObject.toJSONString(nums));
+        quickSort(nums,0, nums.length - 1);
+        System.out.println(JSONObject.toJSONString(nums));
+        Arrays.sort(copyOf);
 
-        quickSort(arr, 0, arr.length - 1);
-
-        for (int i : arr) {
-            System.out.print(i + "\t");
+        for (int i = 0; i < nums.length; i++) {
+            if (copyOf[i] != nums[i]){
+                System.out.println("fuck.....");
+                break;
+            }
         }
+
+        System.out.println("nice!!!!!");
     }
 
     /**

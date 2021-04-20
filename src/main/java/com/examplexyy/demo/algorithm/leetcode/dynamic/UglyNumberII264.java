@@ -12,6 +12,11 @@ package com.examplexyy.demo.algorithm.leetcode.dynamic;
  */
 public class UglyNumberII264 {
 
+    public static void main(String[] args) {
+        UglyNumberII264 u = new UglyNumberII264();
+        System.out.println(u.nthUglyNumber(10));
+    }
+
     public int nthUglyNumber(int n) {
         if (n < 1) {
             return 0;
@@ -32,6 +37,7 @@ public class UglyNumberII264 {
                 index5++;
             }
         }
+        System.out.println(dp);
         return dp[n-1];
     }
 }
