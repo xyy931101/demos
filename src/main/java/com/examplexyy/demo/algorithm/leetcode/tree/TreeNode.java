@@ -22,15 +22,15 @@ public class TreeNode {
     public static TreeNode getHead(){
         TreeNode one = new TreeNode(1);
         TreeNode two = new TreeNode(2);
-        TreeNode three = new TreeNode(2);
+        TreeNode three = new TreeNode(3);
         one.left = two;
         one.right = three;
-        TreeNode four = new TreeNode(3);
-        TreeNode five = new TreeNode(4);
+        TreeNode four = new TreeNode(4);
+        TreeNode five = new TreeNode(5);
         two.left = four;
         two.right = five;
-        TreeNode six = new TreeNode(4);
-        TreeNode se = new TreeNode(3);
+        TreeNode six = new TreeNode(6);
+        TreeNode se = new TreeNode(7);
         three.left = six;
         three.right = se;
         return one;
