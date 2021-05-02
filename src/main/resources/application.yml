@@ -8,7 +8,6 @@ logging:
       examplexyy:
         demo: debug
 
-  file: /logs/app.log
 
 
 spring:

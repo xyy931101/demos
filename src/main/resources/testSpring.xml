@@ -10,12 +10,12 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd http://www.spri
     <!-- 实现了用户自定义初始化和销毁方法 -->
     <bean id="x" class="com.examplexyy.demo.spring.BookX" >
         <!-- 注入bean 属性名称 -->
-        <property name="y" ref="y" />
+<!--        <property name="y" ref="y" />-->
     </bean>
 
-    <bean id="y" class="com.examplexyy.demo.spring.BookY" >
-        <!-- 注入bean 属性名称 -->
+<!--    <bean id="y" class="com.examplexyy.demo.spring.BookY" >
+        &lt;!&ndash; 注入bean 属性名称 &ndash;&gt;
         <property name="x" ref="x" />
-    </bean>
+    </bean>-->
 
 </beans>

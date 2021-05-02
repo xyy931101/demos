@@ -13,5 +13,7 @@ public class TestSpringContext {
         ClassPathXmlApplicationContext tx = new ClassPathXmlApplicationContext("testSpring.xml");
         BookY bean = tx.getBean(BookY.class);
         System.out.println(bean);
+        System.out.println(Thread.currentThread().getName());
+        bean.get();
     }
 }
