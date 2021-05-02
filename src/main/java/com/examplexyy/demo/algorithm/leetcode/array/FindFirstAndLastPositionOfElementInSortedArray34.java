@@ -17,7 +17,7 @@ public class FindFirstAndLastPositionOfElementInSortedArray34 {
         System.out.println(f.searchRange(new int[]{1}, 1));
     }
 
-    public int[] searchRange(int[] nums, int target) {
+    public int[] searchRange2(int[] nums, int target) {
         if (nums == null || nums.length < 1) {
             return new int[] {-1, -1};
         }
@@ -28,21 +28,50 @@ public class FindFirstAndLastPositionOfElementInSortedArray34 {
             return new int[] {0, 0};
         }
 
-        int[] res = new int[2];
+        int[] res = new int[] {-1, -1};
         boolean exists = false;
         for (int i = 0; i < nums.length; i++) {
-           if (!exists){
                if (nums[i] == target) {
-                   res[0] = 1;
-                   exists = true;
+                   if (!exists) {
+                       res[0] = i;
+                       exists = true;
+                   }
+                   res[1] = i;
                }
-           }else {
-               if (nums[i] != target) {
-                   res[1] = i - 1;
-                   return res;
-               }
-           }
         }
-        return new int[] {-1, -1};
+        return res;
+    }
+
+    public int[] searchRange(int[] nums, int target) {
+        int[] ans = new int[]{-1, -1};
+        int n = nums.length;
+        if (n == 0) {
+            return ans;
+        }
+        int l = 0, r = n - 1;
+        while (l < r) {
+            int mid = l + r >> 1;
+            if (nums[mid] >= target) {
+                r = mid;
+            } else {
+                l = mid + 1;
+            }
+        }
+        if (nums[l] != target) {
+            return ans;
+        } else {
+            ans[0] = l;
+            l = 0; r = n - 1;
+            while (l < r) {
+                int mid = l + r + 1 >> 1;
+                if (nums[mid] <= target) {
+                    l = mid;
+                } else {
+                    r = mid - 1;
+                }
+            }
+            ans[1] = l;
+            return ans;
+        }
     }
 }

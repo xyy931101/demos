@@ -1,5 +1,7 @@
 package com.examplexyy.demo.algorithm.leetcode.array;
 
+import java.util.Arrays;
+
 /**
  * 31. 下一个排列
  * 实现获取 下一个排列 的函数，算法需要将给定数字序列重新排列成字典序中下一个更大的排列。
@@ -14,36 +16,25 @@ package com.examplexyy.demo.algorithm.leetcode.array;
  */
 public class NextPermutation31 {
 
-    public void nextPermutation(int[] nums) {
-        int end = nums.length-1;
-        int start = 0;
-        boolean find = false;
-
-        int right = nums.length - 1;
-        while (right > 0){
-            if (nums[right] > nums[right - 1]) {
-                swap(nums, right - 1, right);
-                return;
+        public void nextPermutation(int[] nums) {
+            for (int i = nums.length - 1; i > 0 ; i--) {
+                if (nums[i] > nums[i - 1]) {
+                    Arrays.sort(nums, i, nums.length);
+                    for (int j = i; j < nums.length; j++) {
+                        if (nums[j] > nums[i - 1]) {
+                            swap(nums, i - 1, j);
+                            return;
+                        }
+                    }
+                }
             }
-            right--;
+            //走到这一步则证明是递增的数组
+            Arrays.sort(nums);
         }
 
-        reverse(nums, 0);
-    }
-
-    public void swap(int[] nums, int left, int right){
-        int k = nums[left];
-        nums[left] = nums[right];
-        nums[right] = k;
-    }
-
-    public void reverse(int[] nums, int start) {
-        int left = start, right = nums.length - 1;
-        while (left < right) {
-            swap(nums, left, right);
-            left++;
-            right--;
+        public void swap(int[] nums, int left, int right){
+            int k = nums[left];
+            nums[left] = nums[right];
+            nums[right] = k;
         }
-    }
-
 }
