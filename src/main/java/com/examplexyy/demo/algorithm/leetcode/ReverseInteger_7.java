@@ -11,20 +11,21 @@ public class ReverseInteger_7 {
 
 
     public static void main(String[] args) {
+        System.out.println(-1 / 10);
         System.out.println(reverse(463847412));
     }
 
     public static int reverse(int x) {
-        int result = 0;
-        while(x != 0){
-            int pop = x % 10;
-            if(x > Integer.MAX_VALUE / 10 || result < Integer.MIN_VALUE ){
+        int rev = 0;
+        while (x != 0) {
+            if (rev < Integer.MIN_VALUE / 10 || rev > Integer.MAX_VALUE / 10) {
                 return 0;
             }
-            result = result * 10 + pop;
+            int digit = x % 10;
             x /= 10;
+            rev = rev * 10 + digit;
         }
-        return result;
+        return rev;
     }
 
 
