@@ -2,6 +2,7 @@ package com.examplexyy.demo.concurrent.atomic;
 
 import lombok.Data;
 
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicStampedReference;
 
 /**
@@ -23,5 +24,8 @@ public class AtomicDemo {
             reference.setVersion(10);
         });
 
+
+        AtomicInteger atomicInteger = new AtomicInteger(0);
+        atomicInteger.getAndIncrement();
     }
 }

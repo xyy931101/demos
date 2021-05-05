@@ -13,9 +13,14 @@ public class ReentrantLockDemo {
 
     public static void main(String[] args) {
         ReentrantLock lock = new ReentrantLock();
-
-
         lock.lock();
+        try {
+
+        }catch (Exception e) {
+
+        }finally {
+            lock.unlock();
+        }
 
     }
 }

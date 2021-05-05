@@ -44,4 +44,8 @@ public class LockSupportDemp {
         B.start();
         C.start();
     }
+
+    public void testLock(){
+
+    }
 }

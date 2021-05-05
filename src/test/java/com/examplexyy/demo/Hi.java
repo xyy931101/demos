@@ -2,8 +2,12 @@ package com.examplexyy.demo;
 
 import com.alibaba.fastjson.JSONObject;
 import com.examplexyy.demo.algorithm.MathUtil;
+import org.junit.Test;
 
+import java.io.IOException;
 import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.LockSupport;
 
 /**
  * @Author: Xiongyy
@@ -115,6 +119,63 @@ public class Hi {
         } else {
             return getKth(k, nums, left + 1, end);
         }
+    }
+
+    @Test
+    public void testLockSupport() throws IOException {
+        Thread t = new Thread(() -> {
+            for (int i = 0; i < 10; i++) {
+                System.out.println(Thread.currentThread().getName() + "...." + i);
+                try {
+                    TimeUnit.SECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                if (i == 5) {
+                    LockSupport.park();
+                }
+            }
+        });
+        t.start();
+
+       try {
+            TimeUnit.SECONDS.sleep(7);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println(Thread.currentThread().getName() + "after 7 seconds");
+        LockSupport.unpark(t);
+        System.in.read();
+
+    }
+
+    @Test
+    public void testLockSupport2() throws IOException {
+
+        Thread t1 = new Thread(() -> {
+            System.out.println("t1线程启动");
+            LockSupport.park();
+            System.out.println("t1线程结束。。。。");
+        });
+        t1.start();
+        new Thread(() -> {
+            for (int i = 0; i < 10; i++) {
+                if (i == 5) {
+                    LockSupport.unpark(t1);
+                }
+                System.out.println(Thread.currentThread().getName() + "...." + i);
+                try {
+                    TimeUnit.SECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }).start();
+        while (true) {
+
+        }
+
     }
 
 }
