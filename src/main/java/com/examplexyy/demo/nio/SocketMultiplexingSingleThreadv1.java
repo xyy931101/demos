@@ -81,10 +81,10 @@ public class SocketMultiplexingSingleThreadv1 {
                 //这里是从内核读到app里面的buffer
                 read = client.read(buffer);
                 if (read > 0) {
+                    //翻转buffer
                     buffer.flip();
                     byte[] aaa = new byte[buffer.limit()];
                     buffer.get(aaa);
-
                     b = new String(aaa);
                 }else if (read == 0) {
                     break;
