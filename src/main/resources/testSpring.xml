@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 扫描bean -->
+    <context:component-scan base-package="com.examplexyy.demo.spring"/>
+
+    <!-- 实现了用户自定义初始化和销毁方法 -->
+    <bean id="x" class="com.examplexyy.demo.spring.BookX" >
+        <!-- 注入bean 属性名称 -->
+<!--        <property name="y" ref="y" />-->
+    </bean>
+
+<!--    <bean id="y" class="com.examplexyy.demo.spring.BookY" >
+        &lt;!&ndash; 注入bean 属性名称 &ndash;&gt;
+        <property name="x" ref="x" />
+    </bean>-->
+
+</beans>
