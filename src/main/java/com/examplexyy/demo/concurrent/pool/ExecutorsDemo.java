@@ -23,10 +23,12 @@ public class ExecutorsDemo {
         try {
             poolExecutor.submit(() -> System.out.println(Thread.currentThread().getName() + "ok"));
             for (int i = 0; i < 5; i++) {
-                poolExecutor.execute(() ->{
+                Future<Integer> submit = poolExecutor.submit(() -> {
                     System.out.println(poolExecutor.getTaskCount());
                     System.out.println(Thread.currentThread().getName() + "ok");
+                    return 1;
                 });
+                System.out.println(Thread.currentThread().getName() + "      " + submit.get());
             }
         } catch (Exception e) {
             e.printStackTrace();

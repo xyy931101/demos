@@ -7,8 +7,6 @@ import org.redisson.config.Config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.concurrent.TimeUnit;
-
 /**
  * @Author: Xiongyy
  * @Date: 2021/4/15 23:42
@@ -47,6 +45,8 @@ public class RedissonDemo {
 
         RLock lock = redisson.getLock("myLock");
 
-        lock.lock(1, TimeUnit.SECONDS);
+        lock.lock();
+            //这里是业务参数
+        lock.unlock();
     }
 }
