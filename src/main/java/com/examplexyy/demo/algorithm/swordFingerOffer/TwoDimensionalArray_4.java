@@ -23,6 +23,7 @@ public class TwoDimensionalArray_4 {
                           {10, 13, 14, 17, 24},
                           {18, 21, 23, 26, 30}};
         System.out.println(Find(55, matrix));
+
     }
 
     public static boolean Find(int target, int[][] matrix) {

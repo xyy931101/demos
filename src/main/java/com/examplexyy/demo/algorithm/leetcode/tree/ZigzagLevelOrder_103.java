@@ -30,7 +30,9 @@ public class ZigzagLevelOrder_103 {
             Deque<Integer> levelList = new LinkedList<Integer>();
             int size = nodeQueue.size();
             for (int i = 0; i < size; ++i) {
+
                 TreeNode curNode = nodeQueue.poll();
+                levelList.addFirst(curNode.val);
                 if (isOrderLeft) {
                     levelList.offerLast(curNode.val);
                 } else {
