@@ -1,15 +1,9 @@
 package com.examplexyy.demo;
 
-import com.examplexyy.demo.model.Book;
 import com.examplexyy.demo.model.Movie;
-import com.examplexyy.demo.repo.BookRepository;
 import com.examplexyy.demo.repo.MovieRepository;
-//import io.searchbox.client.JestClient;
-//import io.searchbox.core.Index;
-//import io.searchbox.core.Search;
-//import io.searchbox.core.SearchResult;
 import com.examplexyy.demo.service.MailService;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
