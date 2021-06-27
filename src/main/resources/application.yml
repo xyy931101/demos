@@ -14,18 +14,17 @@ spring:
     baselineOnMigrate: true
 
   datasource:
-    url: jdbc:mysql://localhost:3306/xyy
+    url: jdbc:mysql://106.52.223.163:3306/xyy
     username: root
-    password: root
+    password: 931101
     driver-class-nam: com.mysql.jdbc.Driver
 
   rabbitmq:
-    addresses: 8.129.216.97:5672
+    addresses: 106.52.223.163:5672
     username: guest
     password: guest
     virtual-host: /
     publisher-returns: true
-    publisher-confirms: true
     listener:
       direct:
         acknowledge-mode: manual
