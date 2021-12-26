@@ -1,7 +1,5 @@
 package com.examplexyy.demo;
 
-import com.alibaba.fastjson.JSONObject;
-import com.examplexyy.demo.algorithm.MathUtil;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -27,7 +25,7 @@ import java.util.concurrent.locks.LockSupport;
 public class Hi {
     public static void main(String[] args) {
         System.out.println("hi");
-        int[] nums = MathUtil.generateRandomArray(100, 100);
+       /* int[] nums = MathUtil.generateRandomArray(100, 100);
 //        int[] nums = new int[]{87,38,88,69,4,81,45,49,65,23};
 //        int[] nums = new int[]{38,69,87,81,45,49,65,88};
         int[] copyOf = Arrays.copyOf(nums, nums.length);
@@ -45,7 +43,7 @@ public class Hi {
             }
         }
 
-        System.out.println("nice!!!!!");
+        System.out.println("nice!!!!!");*/
     }
 
     public static int[] quickSort(int[] nums) {
