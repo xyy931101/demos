@@ -18,7 +18,7 @@ public class RateLimiterDemo {
     public static void main(String[] args) {
 
 
-        rateLimiter.tryAcquire();
+        boolean acquire = rateLimiter.tryAcquire();
 
         Semaphore semaphore = new Semaphore(3);
         try {
