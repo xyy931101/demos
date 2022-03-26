@@ -22,9 +22,15 @@ import java.util.Map;
  * 不见满街漂亮妹，哪个归得程序员？
  */
 public class JedisDemo {
+
+    public Jedis getJedis(){
+        Jedis jedis = new Jedis("106.52.223.163", 6379);
+        jedis.auth("foobared");
+        return jedis;
+    }
+
     public void strTest(){
-        Jedis jedis = new Jedis("8.129.216.97", 6379);
-        jedis.auth("admin");
+        Jedis jedis = getJedis();
         jedis.set("xyy1", "vxyy1");
         System.out.println(jedis.get("xyy1"));
         jedis.mset("xyy2", "vxyy2", "xyy3", "vxyy3");
@@ -32,24 +38,23 @@ public class JedisDemo {
         System.out.println(JSON.toJSONString(values));
 
         jedis.incr("xyy1:shuaiqizhi");
+        jedis.setnx("xxx", "9999");
+        Double d = 0.0;
         System.out.println(jedis.get("xyy1:shuaiqizhi"));
     }
 
 
     public void hashTest(){
-        Jedis jedis = new Jedis("8.129.216.97", 6379);
-        jedis.auth("admin");
+        Jedis jedis = getJedis();
         System.out.println(jedis.hget("book:1", "name"));
         Map<String, String> book1 = jedis.hgetAll("book:1");
         System.out.println(JSON.toJSONString(book1));
     }
 
     public void listTest(){
-        Jedis jedis = new Jedis("8.129.216.97", 6379);
-        jedis.auth("admin");
-        System.out.println(jedis.hget("book:1", "name"));
-        Map<String, String> book1 = jedis.hgetAll("book:1");
-        System.out.println(JSON.toJSONString(book1));
+        Jedis jedis = getJedis();
+        String jobs = jedis.lpop("jobs");
+        System.out.println(jobs);
     }
 
     public static void main(String[] args) {
@@ -57,5 +62,6 @@ public class JedisDemo {
 
 
         demo.strTest();
+        demo.hashTest();
     }
 }
