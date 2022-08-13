@@ -2,7 +2,6 @@ package com.examplexyy.demo.mq;
 
 import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
@@ -21,7 +20,7 @@ import javax.annotation.PostConstruct;
  *          不见满街漂亮妹，哪个归得程序员？
  */
 
-@Component
+//@Component
 public class MqService {
 
     @Autowired

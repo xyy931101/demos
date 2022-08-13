@@ -1,7 +1,6 @@
 package com.examplexyy.demo.repo;
 
 import com.examplexyy.demo.model.Movie;
-import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 
 import java.util.List;
 
@@ -20,6 +19,8 @@ import java.util.List;
  * 别人笑我忒疯癫，我笑自己命太贱；
  * 不见满街漂亮妹，哪个归得程序员？
  */
-public interface MovieRepository extends ElasticsearchRepository<Movie, String> {
+public interface MovieRepository
+//        extends ElasticsearchRepository<Movie, String>
+{
     public List<Movie> findMovieByTitleLike(String title);
 }

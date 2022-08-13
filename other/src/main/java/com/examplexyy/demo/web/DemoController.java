@@ -1,9 +1,7 @@
 package com.examplexyy.demo.web;
 
 import com.examplexyy.demo.model.Personal;
-import com.examplexyy.demo.repo.PersonalRepo;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,7 +11,7 @@ import java.util.Date;
 @Slf4j
 public class DemoController {
 
-    @Autowired private PersonalRepo personalRepo;
+//    @Autowired private PersonalRepo personalRepo;
 
     @RequestMapping("hello")
     public Personal tryHello(){
@@ -22,7 +20,7 @@ public class DemoController {
         person.setName("xyyDemo");
         person.setEmail("18850198317@163.com");
         person.setBirthday(new Date());
-        person = personalRepo.save(person);
+//        person = personalRepo.save(person);
         log.info("xyy person ->{}", person);
         return person;
     }

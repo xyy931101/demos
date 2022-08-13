@@ -1,7 +1,5 @@
 package com.examplexyy.demo;
 
-import com.examplexyy.demo.model.Movie;
-import com.examplexyy.demo.repo.MovieRepository;
 import com.examplexyy.demo.service.MailService;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -10,7 +8,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.mail.MessagingException;
-import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -23,8 +20,8 @@ public class DemoApplicationTests {
 
 //    @Autowired
 //    JestClient jestClient;
-    @Autowired
-    MovieRepository repository;
+//    @Autowired
+//    MovieRepository repository;
 
     @Autowired
     MailService mailService;
@@ -58,20 +55,20 @@ public class DemoApplicationTests {
     /**
      * spring data 索引
      */
-    @Test
+    /*@Test
     public void testElasticsearch(){
         Movie movie = new Movie(1, "xyy的电影", 2020, null);
         Movie index = repository.index(movie);
         System.out.println(movie);
-    }
+    }*/
 
 
-    @Test
+   /* @Test
     public void testSearch(){
 
         List<Movie> movies = repository.findMovieByTitleLike("x");
         System.out.println(movies);
-    }
+    }*/
 
 
     @Test

@@ -1,0 +1,54 @@
+
+server:
+  port: 8082
+#日志相关
+logging:
+  level:
+    com:
+      examplexyy:
+        demo: debug
+
+#spring:
+#  flyway:
+#    locations: classpath:db/migration
+#    baselineOnMigrate: true
+
+  datasource:
+#    url: jdbc:mysql://106.52.223.163:3306/xyy
+#    username: root
+#    password: root
+#    driver-class-nam: com.mysql.jdbc.Driver
+
+#  rabbitmq:
+#    addresses: 106.52.223.163:5672
+#    username: guest
+#    password: guest
+#    virtual-host: /
+#    publisher-returns: true
+#    listener:
+#      direct:
+#        acknowledge-mode: manual
+#        prefetch: 1
+#      retry:
+#        ####开启消费者重试
+#        enabled: true
+#        ####最大重试次数（默认无数次）
+#        max-attempts: 5
+#        ####重试间隔次数
+#        initial-interval: 3000
+#
+#  redis:
+#
+#
+#  data:
+#    elasticsearch:
+#      cluster-nodes: 127.0.0.1:9300
+
+
+#邮件相关
+mail:
+  transport:
+    protocol: 25
+    account: 18850198317@163.com
+    password: xyy19931101
+    host: smtp.163.com

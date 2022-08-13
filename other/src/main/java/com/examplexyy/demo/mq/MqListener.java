@@ -2,10 +2,8 @@ package com.examplexyy.demo.mq;
 
 import com.rabbitmq.client.Channel;
 import org.springframework.amqp.core.Message;
-import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.listener.api.ChannelAwareMessageListener;
-import org.springframework.stereotype.Component;
 
 /**
  * @Author: Xiongyy
@@ -13,8 +11,8 @@ import org.springframework.stereotype.Component;
  * .............................................
  * 佛祖保佑             永无BUG
  */
-@Component
-@EnableRabbit
+//@Component
+//@EnableRabbit
 public class MqListener implements ChannelAwareMessageListener {
     //Ack手动确认时要继承该类
 
